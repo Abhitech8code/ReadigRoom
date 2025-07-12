@@ -23,7 +23,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
     ? process.env.FRONTEND_URL || '*'
-    : ['http://localhost:3000', 'http://localhost:5173'],
+    : ['http://localhost:5173', "https://readigrooms.onrender.com"],
   credentials: true
 }));
 app.use(express.json());
